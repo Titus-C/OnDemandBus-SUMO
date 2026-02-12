@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-01-24T20:08:45.241499+08:00 by Eclipse SUMO netedit 1.25.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- StoppingPlaces -->
+    <busStop id="bs_0" lane="A3B3_1" startPos="170.00" endPos="180.00"/>
+    <busStop id="bs_1" lane="B3C3_1" startPos="160.00" endPos="170.00"/>
+    <busStop id="bs_10" lane="A1A2_1" startPos="179.54" endPos="189.54"/>
+    <busStop id="bs_11" lane="A2A3_1" startPos="176.14" endPos="186.14"/>
+    <busStop id="bs_12" lane="B3A3_1" startPos="151.32" endPos="161.32"/>
+    <busStop id="bs_13" lane="A3A2_1" startPos="145.64" endPos="155.64"/>
+    <busStop id="bs_14" lane="A2A1_1" startPos="139.22" endPos="149.22"/>
+    <busStop id="bs_15" lane="A1A0_1" startPos="139.84" endPos="149.84"/>
+    <busStop id="bs_16" lane="A0B0_1" startPos="166.12" endPos="176.12"/>
+    <busStop id="bs_17" lane="B0C0_1" startPos="163.86" endPos="173.86"/>
+    <busStop id="bs_18" lane="C0D0_1" startPos="149.38" endPos="159.38"/>
+    <busStop id="bs_19" lane="D0D1_1" startPos="150.79" endPos="160.79"/>
+    <busStop id="bs_2" lane="C3D3_1" startPos="151.14" endPos="161.14"/>
+    <busStop id="bs_20" lane="D1D2_1" startPos="171.19" endPos="181.19"/>
+    <busStop id="bs_21" lane="D2D3_1" startPos="162.49" endPos="172.49"/>
+    <busStop id="bs_22" lane="D3C3_1" startPos="170.98" endPos="180.98"/>
+    <busStop id="bs_23" lane="C3B3_1" startPos="160.07" endPos="170.07"/>
+    <busStop id="bs_3" lane="D3D2_1" startPos="159.32" endPos="169.32"/>
+    <busStop id="bs_4" lane="D2D1_1" startPos="148.92" endPos="158.92"/>
+    <busStop id="bs_5" lane="D1D0_1" startPos="170.01" endPos="180.01"/>
+    <busStop id="bs_6" lane="D0C0_1" startPos="171.60" endPos="181.60"/>
+    <busStop id="bs_7" lane="C0B0_1" startPos="154.96" endPos="164.96"/>
+    <busStop id="bs_8" lane="B0A0_1" startPos="155.05" endPos="165.05"/>
+    <busStop id="bs_9" lane="A0A1_1" startPos="182.46" endPos="192.46"/>
+</additional>

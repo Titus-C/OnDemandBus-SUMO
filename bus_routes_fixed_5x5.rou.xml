@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <!-- <vType id="bus" vClass="bus" personCapacity="85" accel="1.0" decel="3.0" length="12.0" /> -->
+    <vType id="bus" vClass="bus">
+        <param key="has.fcd.device" value="true"/>
+    </vType>
+    
+    <!-- Perimeter Clockwise (looping) -->
+    <route id="perimeter_cw" repeat="999" cycleTime="600.00"
+        edges="E4D4 D4C4 C4B4 B4A4 A4A3 A3A2 A2A1 A1A0 A0B0 B0C0 C0D0 D0E0 E0E1 E1E2 E2E3 E3E4">
+        <stop busStop="bs_29" duration="30.00" />
+        <stop busStop="bs_30" duration="30.00" />
+        <stop busStop="bs_31" duration="30.00" />
+        <stop busStop="bs_16" duration="30.00" />
+        <stop busStop="bs_17" duration="30.00" />
+        <stop busStop="bs_18" duration="30.00" />
+        <stop busStop="bs_19" duration="30.00" />
+        <stop busStop="bs_20" duration="30.00" />
+        <stop busStop="bs_21" duration="30.00" />
+        <stop busStop="bs_22" duration="30.00" />
+        <stop busStop="bs_23" duration="30.00" />
+        <stop busStop="bs_24" duration="30.00" />
+        <stop busStop="bs_25" duration="30.00" />
+        <stop busStop="bs_26" duration="30.00" />
+        <stop busStop="bs_27" duration="30.00" />
+        <stop busStop="bs_28" duration="30.00" />
+    </route>
+    
+    <!-- Perimeter Counter-Clockwise (looping) -->
+    <route id="perimeter_ccw" repeat="999" cycleTime="600.00"
+        edges="E4E3 E3E2 E2E1 E1E0 E0D0 D0C0 C0B0 B0A0 A0A1 A1A2 A2A3 A3A4 A4B4 B4C4 C4D4 D4E4">
+        <stop busStop="bs_4" duration="30.00" />
+        <stop busStop="bs_5" duration="30.00" />
+        <stop busStop="bs_6" duration="30.00" />
+        <stop busStop="bs_7" duration="30.00" />
+        <stop busStop="bs_8" duration="30.00" />
+        <stop busStop="bs_9" duration="30.00" />
+        <stop busStop="bs_10" duration="30.00" />
+        <stop busStop="bs_11" duration="30.00" />
+        <stop busStop="bs_12" duration="30.00" />
+        <stop busStop="bs_13" duration="30.00" />
+        <stop busStop="bs_14" duration="30.00" />
+        <stop busStop="bs_15" duration="30.00" />
+        <stop busStop="bs_0" duration="30.00" />
+        <stop busStop="bs_1" duration="30.00" />
+        <stop busStop="bs_2" duration="30.00" />
+        <stop busStop="bs_3" duration="30.00" />
+    </route>
+    
+    <!-- Trunk Horizontal Left-to-Right -->
+    <route id="trunk_h_lr" edges="A2B2 B2C2 C2D2 D2E2">
+        <stop busStop="bs_40" duration="30.00" />
+        <stop busStop="bs_41" duration="30.00" />
+        <stop busStop="bs_42" duration="30.00" />
+        <stop busStop="bs_43" duration="30.00" />
+    </route>
+    
+    <!-- Trunk Horizontal Right-to-Left -->
+    <route id="trunk_h_rl" edges="E2D2 D2C2 C2B2 B2A2">
+        <stop busStop="bs_44" duration="30.00" />
+        <stop busStop="bs_45" duration="30.00" />
+        <stop busStop="bs_46" duration="30.00" />
+        <stop busStop="bs_47" duration="30.00" />
+    </route>
+    
+    <!-- Trunk Vertical Bottom-to-Top -->
+    <route id="trunk_v_bt" edges="C0C1 C1C2 C2C3 C3C4">
+        <stop busStop="bs_32" duration="30.00" />
+        <stop busStop="bs_33" duration="30.00" />
+        <stop busStop="bs_34" duration="30.00" />
+        <stop busStop="bs_35" duration="30.00" />
+    </route>
+    
+    <!-- Trunk Vertical Top-to-Bottom -->
+    <route id="trunk_v_tb" edges="C4C3 C3C2 C2C1 C1C0">
+        <stop busStop="bs_36" duration="30.00" />
+        <stop busStop="bs_37" duration="30.00" />
+        <stop busStop="bs_38" duration="30.00" />
+        <stop busStop="bs_39" duration="30.00" />
+    </route>
+    
+    <!-- Vehicles - depart at 10, not 0 -->
+    <vehicle id="bus_cw" type="bus" depart="10.00" line="1" route="perimeter_cw"/>
+    <vehicle id="bus_ccw" type="bus" depart="10.00" line="2" route="perimeter_ccw"/>
+    
+    <!-- Flows - begin at 10, not 0 -->
+    <flow id="f_trunk_h_lr" type="bus" route="trunk_h_lr" begin="10.00" end="86400" period="300" line="3" />
+    <flow id="f_trunk_h_rl" type="bus" route="trunk_h_rl" begin="10.00" end="86400" period="300" line="4" />
+    <flow id="f_trunk_v_bt" type="bus" route="trunk_v_bt" begin="10.00" end="86400" period="300" line="5" />
+    <flow id="f_trunk_v_tb" type="bus" route="trunk_v_tb" begin="10.00" end="86400" period="300" line="6" />
+</routes>

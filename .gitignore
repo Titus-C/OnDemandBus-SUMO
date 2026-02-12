@@ -1,0 +1,10 @@
+venv/
+.env/
+.venv/
+__pycache__/
+/experiments/
+fcd_*.csv
+tripinfo_*.csv
+stop_*.csv
+figures/
+*.png

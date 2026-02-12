@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sumoConfiguration>
+    <input>
+        <net-file value="bus_5x5_250_with_ped_staticTLS.net.xml"/>
+        <route-files value="bus_routes_5x5_veh_15.rou.xml,traffic_seed26_high.rou.xml,passengers_seed26_high_drt.rou.xml"/>
+        <additional-files value="bus_5x5.add.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+    <routing>
+        <persontrip.transfer.walk-taxi value="ptStops"/>
+        <persontrip.transfer.taxi-walk value="ptStops"/>
+    </routing>
+    <processing>
+        <device.taxi.dispatch-algorithm value="traci"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+    <report>
+        <verbose value="true"/>
+        <log value="simulation.log.txt"/>
+        <error-log value="sumo_error.log"/>
+    </report>
+    <output>
+        <tripinfo-output.write-unfinished value="true"/>
+        <tripinfo-output value="tripinfo.output.xml"/>
+        <stop-output value="stop.output.xml"/>
+        <statistic-output value="statistics.output.xml"/>
+    </output>
+</sumoConfiguration>

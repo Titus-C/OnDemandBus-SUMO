@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-12-11T19:48:29.983657+09:00 by Eclipse SUMO sumo 1.25.0
+-->
+
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="bus_with_tls.net.xml"/>
+        <route-files value="bus_routes.rou.xml,routes.rou.drt.xml"/>
+        <additional-files value="bus.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="7200"/>
+    </time>
+
+    <taxi_device>
+        <device.taxi.dispatch-algorithm value="traci"/>
+    </taxi_device>
+	
+	<report>
+        <verbose value="true"/>
+        <log value="simulation.log.txt"/>
+    </report> 
+	
+	<output>
+		<tripinfo-output.write-unfinished value="true"/>
+		<tripinfo-output value="tripinfo.output.xml"/>
+		<stop-output value="stop.output.xml"/>
+        <device.taxi.dispatch-algorithm.output value="taxi_dispatch.output.xml"/>
+        <statistic-output value="statistics.output.xml"/>
+    </output>
+
+</sumoConfiguration>

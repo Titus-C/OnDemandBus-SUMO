@@ -1,0 +1,5 @@
+<additional>
+  <parkingArea id="depot_NW" lane="A4B4_1" startPos="10" endPos="80" roadsideCapacity="10"/>
+  <parkingArea id="depot_C"  lane="B2C2_1" startPos="10" endPos="80" roadsideCapacity="10"/>
+  <parkingArea id="depot_SE" lane="D0E0_1" startPos="10" endPos="80" roadsideCapacity="10"/>
+</additional>

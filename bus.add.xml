@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-28T05:49:09.284020+09:00 by Eclipse SUMO netedit 1.25.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <parkingArea id="depot_NW" lane="A3B3_1" startPos="10" endPos="45" roadsideCapacity="5"/>
+    <parkingArea id="depot_C"  lane="B2C2_1" startPos="10" endPos="45" roadsideCapacity="5"/>
+    <parkingArea id="depot_SE" lane="C0D0_1" startPos="10" endPos="45" roadsideCapacity="5"/>
+    <!-- StoppingPlaces -->
+    <busStop id="bs_0" lane="B0B1_1" startPos="38.69" endPos="48.69"/>
+    <busStop id="bs_1" lane="A0B0_1" startPos="1.82" endPos="11.82"/>
+    <busStop id="bs_10" lane="B2C2_1" startPos="35.80" endPos="45.80"/>
+    <busStop id="bs_11" lane="C2C3_1" startPos="37.15" endPos="47.15"/>
+    <busStop id="bs_12" lane="C3D3_1" startPos="67.38" endPos="77.38"/>
+    <busStop id="bs_13" lane="A1A2_1" startPos="37.87" endPos="47.87"/>
+    <busStop id="bs_14" lane="A2A3_1" startPos="37.10" endPos="47.10"/>
+    <busStop id="bs_15" lane="A3B3_1" startPos="35.88" endPos="45.88"/>
+    <busStop id="bs_16" lane="B3C3_1" startPos="34.80" endPos="44.80"/>
+    <busStop id="bs_17" lane="B0C0_1" startPos="35.70" endPos="45.70"/>
+    <busStop id="bs_18" lane="C0D0_1" startPos="69.05" endPos="79.05"/>
+    <busStop id="bs_19" lane="D0D1_1" startPos="38.25" endPos="48.25"/>
+    <busStop id="bs_2" lane="B1C1_1" startPos="32.95" endPos="42.95"/>
+    <busStop id="bs_20" lane="D1D2_1" startPos="35.63" endPos="45.63"/>
+    <busStop id="bs_21" lane="D0C0_1" startPos="2.17" endPos="12.17"/>
+    <busStop id="bs_22" lane="C0B0_1" startPos="33.88" endPos="43.88"/>
+    <busStop id="bs_23" lane="D2D1_1" startPos="33.73" endPos="43.73"/>
+    <busStop id="bs_24" lane="D1D0_1" startPos="32.86" endPos="42.86"/>
+    <busStop id="bs_25" lane="D3C3_1" startPos="1.85" endPos="11.85"/>
+    <busStop id="bs_26" lane="B3A3_1" startPos="35.51" endPos="45.51"/>
+    <busStop id="bs_27" lane="C3B3_1" startPos="34.65" endPos="44.65"/>
+    <busStop id="bs_28" lane="A3A2_1" startPos="33.73" endPos="43.73"/>
+    <busStop id="bs_29" lane="D3D2_1" startPos="0.77" endPos="10.77"/>
+    <busStop id="bs_3" lane="C1C2_1" startPos="36.52" endPos="46.52"/>
+    <busStop id="bs_30" lane="B1A1_1" startPos="35.47" endPos="45.47"/>
+    <busStop id="bs_31" lane="A2A1_1" startPos="31.48" endPos="41.48"/>
+    <busStop id="bs_32" lane="A1A0_1" startPos="67.39" endPos="77.39"/>
+    <busStop id="bs_33" lane="C3C2_1" startPos="32.12" endPos="42.12"/>
+    <busStop id="bs_34" lane="C2B2_1" startPos="33.46" endPos="43.46"/>
+    <busStop id="bs_35" lane="B2B1_1" startPos="32.67" endPos="42.67"/>
+    <busStop id="bs_36" lane="D2C2_1" startPos="34.59" endPos="44.59"/>
+    <busStop id="bs_38" lane="C2C1_1" startPos="32.78" endPos="42.78"/>
+    <busStop id="bs_39" lane="C1B1_1" startPos="36.10" endPos="46.10"/>
+    <busStop id="bs_4" lane="C2D2_1" startPos="34.74" endPos="44.74"/>
+    <busStop id="bs_40" lane="B1B0_1" startPos="30.61" endPos="40.61"/>
+    <busStop id="bs_5" lane="B0A0_1" startPos="67.58" endPos="77.58"/>
+    <busStop id="bs_6" lane="D2D3_1" startPos="68.47" endPos="78.47"/>
+    <busStop id="bs_7" lane="A0A1_1" startPos="2.00" endPos="12.00"/>
+    <busStop id="bs_8" lane="A1B1_1" startPos="33.80" endPos="43.80"/>
+    <busStop id="bs_9" lane="B1B2_1" startPos="36.88" endPos="46.88"/>
+</additional>

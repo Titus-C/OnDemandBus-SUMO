@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sumoConfiguration>
+    <input>
+        <net-file value="bus_5x5_250_with_ped_staticTLS.net.xml"/>
+        <route-files value="bus_routes_fixed_5x5.rou.xml,traffic_seed28_low.rou.xml,passengers_seed28_p120b2_fixed.rou.xml"/>
+        <additional-files value="bus_5x5.add.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+    <processing>
+        <time-to-teleport value="-1"/>
+        <device.fcd.probability value="0"/>
+    </processing>
+    <report>
+        <verbose value="true"/>
+        <log value="simulation.log.txt"/>
+        <error-log value="sumo_error.log"/>
+    </report>
+    <output>
+        <tripinfo-output.write-unfinished value="true"/>
+        <tripinfo-output value="tripinfo.output.xml"/>
+        <stop-output value="stop.output.xml"/>
+        <statistic-output value="statistics.output.xml"/>
+        <fcd-output value="fcd.xml.gz"/>
+        <fcd-output.distance value="true"/>
+    </output>
+</sumoConfiguration>

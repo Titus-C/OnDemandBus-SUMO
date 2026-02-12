@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-01-24T20:55:07.741293+08:00 by Eclipse SUMO netedit 1.25.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <parkingArea id="depot_NW" lane="A4B4_1" startPos="10" endPos="80" roadsideCapacity="10"/>
+    <parkingArea id="depot_C"  lane="B2C2_1" startPos="10" endPos="80" roadsideCapacity="10"/>
+    <parkingArea id="depot_SE" lane="D0E0_1" startPos="10" endPos="80" roadsideCapacity="10"/>
+
+    <rerouter id="rr_drt_stands"
+              edges="A4B4 B2C2 D0E0">
+        <interval begin="0" end="86400">
+            <parkingAreaReroute id="depot_NW"/>
+            <parkingAreaReroute id="depot_C"/>
+            <parkingAreaReroute id="depot_SE"/>
+        </interval>
+    </rerouter>
+
+    <!-- StoppingPlaces -->
+    <busStop id="bs_0" lane="A4B4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_1" lane="B4C4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_10" lane="C0B0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_11" lane="B0A0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_12" lane="A0A1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_13" lane="A1A2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_14" lane="A2A3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_15" lane="A3A4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_16" lane="B4A4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_17" lane="A4A3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_18" lane="A3A2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_19" lane="A2A1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_2" lane="C4D4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_20" lane="A1A0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_21" lane="A0B0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_22" lane="B0C0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_23" lane="C0D0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_24" lane="D0E0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_25" lane="E0E1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_26" lane="E1E2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_27" lane="E2E3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_28" lane="E3E4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_29" lane="E4D4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_3" lane="D4E4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_30" lane="D4C4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_31" lane="C4B4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_32" lane="C0C1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_33" lane="C1C2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_34" lane="C2C3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_35" lane="C3C4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_36" lane="C4C3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_37" lane="C3C2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_38" lane="C2C1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_39" lane="C1C0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_4" lane="E4E3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_40" lane="A2B2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_41" lane="B2C2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_42" lane="C2D2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_43" lane="D2E2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_44" lane="E2D2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_45" lane="D2C2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_46" lane="C2B2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_47" lane="B2A2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_48" lane="B0B1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_49" lane="B1B2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_5" lane="E3E2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_50" lane="B2B3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_51" lane="B3B4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_52" lane="B4B3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_53" lane="B3B2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_54" lane="B2B1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_55" lane="B1B0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_56" lane="D0D1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_57" lane="D1D2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_58" lane="D2D3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_59" lane="D3D4_1" startPos="110" endPos="120"/>
+    <busStop id="bs_6" lane="E2E1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_60" lane="D4D3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_61" lane="D3D2_1" startPos="110" endPos="120"/>
+    <busStop id="bs_62" lane="D2D1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_63" lane="D1D0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_64" lane="B3C3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_65" lane="A3B3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_66" lane="C3D3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_67" lane="D3E3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_68" lane="E3D3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_69" lane="D3C3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_7" lane="E1E0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_70" lane="C3B3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_71" lane="B3A3_1" startPos="110" endPos="120"/>
+    <busStop id="bs_72" lane="A1B1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_73" lane="B1C1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_74" lane="C1D1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_75" lane="D1E1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_76" lane="E1D1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_77" lane="D1C1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_78" lane="C1B1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_79" lane="B1A1_1" startPos="110" endPos="120"/>
+    <busStop id="bs_8" lane="E0D0_1" startPos="110" endPos="120"/>
+    <busStop id="bs_9" lane="D0C0_1" startPos="110" endPos="120"/>
+</additional>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-28T05:49:09.293377+09:00 by Eclipse SUMO netedit 1.25.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+    <vType id="bus" vClass="bus"/>
+    <!-- <vType id="on_demand_bus" vClass="bus"> -->
+    <vType id="on_demand_bus" vClass="taxi" length="12" personCapacity="85">
+        <param key="has.taxi.device" value="true"/>
+        <param key="device.taxi.dispatch-algorithm" value="traci"/> <!-- Use custom TraCI dispatch -->
+        <param key="device.taxi.idle-algorithm" value="stop"/>
+        <!-- <param key="device.taxi.pickupDuration" value="30"/> 
+        <param key="device.taxi.dropoffDuration" value="30"/>  -->
+    </vType>
+    <!-- Routes -->
+    <!-- <trip id="taxiA" depart="0.00" type="taxi" personCapacity="12">
+        <stop lane="edge0" triggered="person"/>
+    </trip> -->
+    <route id="rbus1" edges="A0B0 B0B1 B1C1 C1C2 C2D2 D2D3">
+        <stop busStop="bs_1" duration="20.00"/>
+        <stop busStop="bs_0" duration="20.00"/>
+        <stop busStop="bs_2" duration="20.00"/>
+        <stop busStop="bs_3" duration="20.00"/>
+        <stop busStop="bs_4" duration="20.00"/>
+        <stop busStop="bs_6" duration="20.00"/>
+    </route>
+    <route id="rbus2" edges="A0A1 A1B1 B1B2 B2C2 C2C3 C3D3">
+        <stop busStop="bs_7" duration="20.00"/>
+        <stop busStop="bs_8" duration="20.00"/>
+        <stop busStop="bs_9" duration="20.00"/>
+        <stop busStop="bs_10" duration="20.00"/>
+        <stop busStop="bs_11" duration="20.00"/>
+        <stop busStop="bs_12" duration="20.00"/>
+    </route>
+    <route id="rbus3" edges="A0A1 A1A2 A2A3 A3B3 B3C3 C3D3 D3D2 D2D1 D1D0 D0C0 C0B0 B0A0" repeat="999" cycleTime="600.00">
+        <stop busStop="bs_7" duration="20.00"/>
+        <stop busStop="bs_13" duration="20.00"/>
+        <stop busStop="bs_14" duration="20.00"/>
+        <stop busStop="bs_15" duration="20.00"/>
+        <stop busStop="bs_16" duration="20.00"/>
+        <stop busStop="bs_12" duration="20.00"/>
+        <stop busStop="bs_29" duration="20.00"/>
+        <stop busStop="bs_23" duration="20.00"/>
+        <stop busStop="bs_24" duration="20.00"/>
+        <stop busStop="bs_21" duration="20.00"/>
+        <stop busStop="bs_22" duration="20.00"/>
+        <stop busStop="bs_5" duration="20.00"/>
+    </route>
+    <route id="rbus4" edges="A0B0 B0C0 C0D0 D0D1 D1D2 D2D3 D3C3 C3B3 B3A3 A3A2 A2A1 A1A0" repeat="999" cycleTime="600.00">
+        <stop busStop="bs_1" duration="20.00"/>
+        <stop busStop="bs_17" duration="20.00"/>
+        <stop busStop="bs_18" duration="20.00"/>
+        <stop busStop="bs_19" duration="20.00"/>
+        <stop busStop="bs_20" duration="20.00"/>
+        <stop busStop="bs_6" duration="20.00"/>
+        <stop busStop="bs_25" duration="20.00"/>
+        <stop busStop="bs_27" duration="20.00"/>
+        <stop busStop="bs_26" duration="20.00"/>
+        <stop busStop="bs_28" duration="20.00"/>
+        <stop busStop="bs_31" duration="20.00"/>
+        <stop busStop="bs_32" duration="20.00"/>
+    </route>
+    <route id="rbus5" edges="D3C3 C3C2 C2B2 B2B1 B1A1 A1A0">
+        <stop busStop="bs_25" duration="20.00"/>
+        <stop busStop="bs_33" duration="20.00"/>
+        <stop busStop="bs_34" duration="20.00"/>
+        <stop busStop="bs_35" duration="20.00"/>
+        <stop busStop="bs_30" duration="20.00"/>
+        <stop busStop="bs_32" duration="20.00"/>
+    </route>
+    <route id="rbus6" edges="D3D2 D2C2 C2C1 C1B1 B1B0 B0A0">
+        <stop busStop="bs_29" duration="20.00"/>
+        <stop busStop="bs_36" duration="20.00"/>
+        <stop busStop="bs_38" duration="20.00"/>
+        <stop busStop="bs_39" duration="20.00"/>
+        <stop busStop="bs_40" duration="20.00"/>
+        <stop busStop="bs_5" duration="20.00"/>
+    </route>
+    <route id="od_depot" edges="A0B0">
+        <stop busStop="bs_1" duration="1000000"/>
+    </route>
+
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <vehicle id="bus3" type="bus" depart="10.00" line="3" route="rbus3"/>
+    <vehicle id="bus4" type="bus" depart="10.00" line="4" route="rbus4"/>
+    <flow id="bus1" type="bus" begin="10.00" end="3600.00" period="200" line="1" route="rbus1"/>
+    <flow id="bus2" type="bus" begin="10.00" end="3600.00" period="200" line="2" route="rbus2"/>
+    <flow id="bus5" type="bus" begin="10.00" end="3600.00" period="200" line="5" route="rbus5"/>
+    <flow id="bus6" type="bus" begin="10.00" end="3600.00" period="200" line="6" route="rbus6"/>
+    
+    <!-- <flow id="odbus1"
+      type="on_demand_bus"
+      begin="200.00"
+      end="3600.00"
+      period="200"
+      route="od_depot"/> -->
+
+    <!-- <trip id="odBusA" depart="0" type="on_demand_bus">
+        <stop lane="A0B0_1" triggered="person"/>
+    </trip>
+    <trip id="odBusB" depart="0" type="on_demand_bus">
+        <stop lane="A0B0_1" triggered="person"/>
+    </trip>
+    <trip id="odBusC" depart="0" type="on_demand_bus">
+        <stop lane="A0B0_1" triggered="person"/>
+    </trip>
+    <trip id="odBusD" depart="0" type="on_demand_bus">
+        <stop lane="A0B0_1" triggered="person"/>
+    </trip>
+    <trip id="odBusE" depart="0" type="on_demand_bus">
+        <stop lane="A0B0_1" triggered="person"/>
+    </trip>
+    <trip id="odBusF" depart="0" type="on_demand_bus">
+        <stop lane="A0B0_1" triggered="person"/>
+    </trip> -->
+
+    <!-- <vehicle id="odbus1.0"  type="on_demand_bus" depart="200.00"  route="od_depot"/>
+    <vehicle id="odbus1.1"  type="on_demand_bus" depart="400.00"  route="od_depot"/>
+    <vehicle id="odbus1.2"  type="on_demand_bus" depart="600.00"  route="od_depot"/>
+    <vehicle id="odbus1.3"  type="on_demand_bus" depart="800.00"  route="od_depot"/>
+    <vehicle id="odbus1.4"  type="on_demand_bus" depart="1000.00" route="od_depot"/>
+    <vehicle id="odbus1.5"  type="on_demand_bus" depart="1200.00" route="od_depot"/>
+    <vehicle id="odbus1.6"  type="on_demand_bus" depart="1400.00" route="od_depot"/>
+    <vehicle id="odbus1.7"  type="on_demand_bus" depart="1600.00" route="od_depot"/>
+    <vehicle id="odbus1.8"  type="on_demand_bus" depart="1800.00" route="od_depot"/>
+    <vehicle id="odbus1.9"  type="on_demand_bus" depart="2000.00" route="od_depot"/>
+    <vehicle id="odbus1.10" type="on_demand_bus" depart="2200.00" route="od_depot"/>
+    <vehicle id="odbus1.11" type="on_demand_bus" depart="2400.00" route="od_depot"/>
+    <vehicle id="odbus1.12" type="on_demand_bus" depart="2600.00" route="od_depot"/>
+    <vehicle id="odbus1.13" type="on_demand_bus" depart="2800.00" route="od_depot"/>
+    <vehicle id="odbus1.14" type="on_demand_bus" depart="3000.00" route="od_depot"/>
+    <vehicle id="odbus1.15" type="on_demand_bus" depart="3200.00" route="od_depot"/>
+    <vehicle id="odbus1.16" type="on_demand_bus" depart="3400.00" route="od_depot"/> -->
+</routes>

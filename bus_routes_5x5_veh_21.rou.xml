@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- VTypes -->
+    <vType id="bus" vClass="bus"/>
+
+    <vType id="on_demand_van" vClass="taxi"
+           length="4.5"
+           width="2.0"
+           height="2.5"
+           personCapacity="8"
+           maxSpeed="16.67"
+           accel="2.0"
+           decel="4.5"
+           sigma="0.5"
+           speedFactor="1.0"
+           speedDev="0.1"
+           color="0.8,0.4,0.0">
+        <param key="has.taxi.device" value="true"/>
+        <param key="device.taxi.dispatch-algorithm" value="traci"/>
+        <param key="device.taxi.idle-algorithm" value="taxistand"/>
+        <!-- This must match the rerouter id above -->
+        <param key="device.taxi.stands-rerouter" value="rr_drt_stands"/>
+
+        <!-- Optional but recommended: choose closest/best stand, not always the first -->
+        <param key="parking.ignoreDest" value="1"/>
+        <param key="device.taxi.pickUpDuration" value="15"/>
+        <param key="device.taxi.dropOffDuration" value="10"/>
+    </vType>
+
+    <vType id="on_demand_bus" vClass="taxi"
+           length="12"
+           personCapacity="85"
+           maxSpeed="12.5"
+           accel="1.2"
+           decel="4.0"
+           sigma="0.5"
+           speedFactor="1.0"
+           speedDev="0.1"
+           color="0.2,0.6,0.8">
+        <param key="has.taxi.device" value="true"/>
+        <param key="device.taxi.dispatch-algorithm" value="traci"/>
+        <param key="device.taxi.pickUpDuration" value="20"/>
+        <param key="device.taxi.dropOffDuration" value="20"/>
+    </vType>
+
+    <!-- ================================================================
+         30 DRT Vehicles distributed across 3 depots (10 per depot)
+         depot_NW: lane A4B4_1, parkingArea depot_NW (10..80)
+         depot_C : lane B2C2_1, parkingArea depot_C  (10..80)
+         depot_SE: lane D0E0_1, parkingArea depot_SE (10..80)
+         ================================================================ -->
+
+    <!-- Depot NW (A4B4_1) -->
+    <vehicle id="odVan01" type="on_demand_van" depart="0" departLane="1" departPos="12" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan02" type="on_demand_van" depart="0" departLane="1" departPos="18" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan03" type="on_demand_van" depart="0" departLane="1" departPos="24" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan04" type="on_demand_van" depart="0" departLane="1" departPos="30" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan05" type="on_demand_van" depart="0" departLane="1" departPos="36" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan06" type="on_demand_van" depart="0" departLane="1" departPos="42" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan07" type="on_demand_van" depart="0" departLane="1" departPos="48" departSpeed="0">
+        <route edges="A4B4"/>
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </vehicle>
+
+    <!--  Depot C (B2C2_1)  -->
+    <vehicle id="odVan11" type="on_demand_van" depart="0" departLane="1" departPos="12" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan12" type="on_demand_van" depart="0" departLane="1" departPos="18" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan13" type="on_demand_van" depart="0" departLane="1" departPos="24" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan14" type="on_demand_van" depart="0" departLane="1" departPos="30" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan15" type="on_demand_van" depart="0" departLane="1" departPos="36" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan16" type="on_demand_van" depart="0" departLane="1" departPos="42" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan17" type="on_demand_van" depart="0" departLane="1" departPos="48" departSpeed="0">
+        <route edges="B2C2"/>
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </vehicle>
+
+    <!--  Depot SE (D0E0_1)  -->
+    <vehicle id="odVan21" type="on_demand_van" depart="0" departLane="1" departPos="12" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan22" type="on_demand_van" depart="0" departLane="1" departPos="18" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan23" type="on_demand_van" depart="0" departLane="1" departPos="24" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan24" type="on_demand_van" depart="0" departLane="1" departPos="30" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan25" type="on_demand_van" depart="0" departLane="1" departPos="36" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan26" type="on_demand_van" depart="0" departLane="1" departPos="42" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+    <vehicle id="odVan27" type="on_demand_van" depart="0" departLane="1" departPos="48" departSpeed="0">
+        <route edges="D0E0"/>
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </vehicle>
+
+</routes>

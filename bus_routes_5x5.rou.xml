@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DRT (On-Demand) Routes for 5x5 Network
+     30 on-demand vans distributed across 3 depots
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <!-- VTypes -->
+    <vType id="bus" vClass="bus"/>
+    
+    <!-- On-demand van (8 passengers) -->
+    <vType id="on_demand_van" vClass="taxi" 
+           length="4.5" 
+           width="2.0"
+           height="2.5"
+           personCapacity="8"
+           maxSpeed="16.67"
+           accel="2.0"
+           decel="4.5"
+           sigma="0.5"
+           speedFactor="1.0"
+           speedDev="0.1"
+           color="0.8,0.4,0.0">
+        <param key="has.taxi.device" value="true"/>
+        <param key="device.taxi.dispatch-algorithm" value="traci"/>
+        <param key="device.taxi.pickUpDuration" value="15"/>
+        <param key="device.taxi.dropOffDuration" value="10"/>
+        <param key="device.taxi.idle-algorithm" value="taxistand"/>
+        <!-- enables taxistand: points to the rerouter that lists stands -->
+        <param key="device.taxi.stands-rerouter" value="rr_drt_stands"/>
+
+        <!-- makes SUMO pick the “best” stand (typically closest) rather than the first in the list -->
+        <param key="parking.ignoreDest" value="1"/> 
+    </vType>
+    
+    <!-- On-demand bus (85 passengers) - optional larger vehicle -->
+    <vType id="on_demand_bus" vClass="taxi" 
+           length="12" 
+           personCapacity="85"
+           maxSpeed="12.5"
+           accel="1.2"
+           decel="4.0"
+           sigma="0.5"
+           speedFactor="1.0"
+           speedDev="0.1"
+           color="0.2,0.6,0.8">
+        <param key="has.taxi.device" value="true"/>
+        <param key="device.taxi.dispatch-algorithm" value="traci"/>
+        <param key="device.taxi.pickUpDuration" value="20"/>
+        <param key="device.taxi.dropOffDuration" value="20"/>
+    </vType>
+
+    <!-- ================================================================
+         30 DRT Vehicles distributed across 3 depots (10 per depot)
+         - depot_NW: A4B4_1 (northwest corner)
+         - depot_C:  B2C2_1 (center)
+         - depot_SE: D0E0_1 (southeast corner)
+         ================================================================ -->
+
+    <!-- Depot NW - 10 vehicles -->
+    <trip id="odVan01" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan02" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan03" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan04" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan05" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <!-- <trip id="odVan06" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan07" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan08" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan09" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan10" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_NW" parking="true" triggered="person"/>
+    </trip> -->
+
+    <!-- Depot C (center) - 10 vehicles -->
+    <trip id="odVan11" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan12" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan13" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan14" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan15" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <!-- <trip id="odVan16" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan17" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan18" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan19" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan20" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_C" parking="true" triggered="person"/>
+    </trip> -->
+
+    <!-- Depot SE (southeast) - 10 vehicles -->
+    <trip id="odVan21" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan22" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan23" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan24" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan25" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <!-- <trip id="odVan26" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan27" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan28" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan29" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip>
+    <trip id="odVan30" depart="0" type="on_demand_van">
+        <stop parkingArea="depot_SE" parking="true" triggered="person"/>
+    </trip> -->
+
+</routes>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-01-24T23:19:39.875179+08:00 by Eclipse SUMO sumo 1.25.0
+-->
+
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="bus_5x5_250_with_ped_staticTLS.net.xml"/>
+        <route-files value="bus_routes_fixed_5x5.rou.xml"/>
+        <additional-files value="bus_5x5.add.xml"/>
+    </input>
+
+</sumoConfiguration>
